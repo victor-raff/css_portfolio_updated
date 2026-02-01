@@ -1,0 +1,134 @@
+/* styles.css */
+/* Styles for the resume webpage */
+/* make container a grid layout */
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    row-gap: 20px;
+    column-gap: 5px;
+}
+/* styles for all divs */
+div {
+    background-color: lightsteelblue;
+    border: 2px solid black;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+/* styles for header, sidebar, main content, and footer */
+.header {
+    grid-area: header;
+}
+/* styles for sidebar navigation */
+nav.sidebar {
+    position: relative;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-top: 10px;
+}
+/* styles for resume button */
+.resume-btn {
+    position: absolute;
+    bottom: 20px;
+    transform: translateY(160%);
+    background-color: rgb(70, 130, 180);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+/* hover effect for resume button */
+.resume-btn:hover {
+    background-color: rgb(100, 149, 237);
+    color: white;
+}
+/* styles for main content area */
+.main-content {
+    grid-area: main;
+    overflow-y: auto;
+}
+/* styles for footer */
+.footer {
+    grid-area: footer;
+    background-color: rgb(176, 196, 222);
+    border: 2px solid black;
+    padding: 15px;
+    color: black;
+    position: relative;
+}
+/* styles for sections within main content */
+#introduction, #education, #experience {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#introduction h3, #education h3, #experience h3 {
+    font-size: 1.4rem;
+}
+
+#introduction p, #education p, #experience p {
+    font-size: 1rem;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+#introduction ul, #education ul, #experience ul {
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+
+}
+#introduction li, #education li, #experience li {
+    margin-bottom: 0.5rem;
+}
+/* styles for skills section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill {
+    background-color: rgb(89, 89, 89);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+/* styles for projects section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.project-card {
+    background-color: rgb(227, 227, 227);
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* styles for contact information in footer */
+#contact-information {
+    position: relative;
+    font-size: 1rem;
+}
